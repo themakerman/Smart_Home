@@ -1,0 +1,71 @@
+body,html {
+	min-height:100%;
+}
+
+body  {
+	background-image: url("smartHome.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+/*This is for the heading font of webpage.Font is used from googleFonts*/
+.top-header {
+	width: 100%;
+	max-width: 900px;
+	font: 4em "Amatic SC" , cursive;
+	color: #fff;
+	text-shadow:1px 1px 0 rgba(0,0,0,.2);
+	margin: 20px auto;
+	text-align: center;
+}
+
+#fanButtons, #lightButtons, #chargingButtons {
+	margin-bottom: 3%;
+}
+
+input#round{
+	
+	width:6.2em; /*same as the height*/
+	height:6.2em; /*same as the width*/
+	background-color:rgba(0,0,0,0.4);
+	border:1px solid #fff; /*same colour as the background*/
+	color:#fff;
+	font-size:0.9em;
+	margin-right: 3%;
+	max-width: auto;
+	max-height: auto;
+	
+		
+	/*set the border-radius at half the size of the width and height*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+	/*give the button a small drop shadow*/
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+	box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+
+/***NOW STYLE THE BUTTON'S HOVER STATE***/
+input#round:hover{
+	
+	background:transparent;
+	border:1px solid #fff;
+	/*reduce the size of the shadow to give a pushed effect*/
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);	
+	box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+
+input#round:active{
+	color: #000;
+	border:5px solid #000;
+
+}
+
+
+

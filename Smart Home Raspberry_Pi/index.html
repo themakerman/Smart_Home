@@ -1,0 +1,74 @@
+<!Doctype html>
+<html lang="en">
+	
+	<head>
+			<meta charset = "UTF-8">
+			<title>Smart Home || Tree Technologies</title> 
+			<link rel="stylesheet" type="text/css" href="main.css">
+			<link href="http://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" >
+			<meta name="viewport" content="width = device-width, inital-scale=1">
+
+	</head>
+
+	<body>
+			<script type="text/javascript" src="/webiopi.js"></script>
+			<script type="text/javascript">
+				
+				webiopi().ready(function(){
+			
+					//Setting the GPIO pin modes to output
+					webiopi().setFunction(21,"OUT");
+					webiopi().setFunction(20,"OUT");
+					webiopi().setFunction(16,"OUT");
+					webiopi().refreshGPIO(true);
+
+				});
+
+				function onFan(){
+					//Corresponding GPIO pin is made high
+					webiopi().digitalWrite(21,1);
+				}
+
+				function offFan(){
+					webiopi().digitalWrite(21,0);
+				}
+
+				function onLights(){
+					webiopi().digitalWrite(20,1);				
+				}
+		
+				function offLights(){
+					webiopi().digitalWrite(20,0);
+				}
+	
+				function onCharger(){
+					webiopi().digitalWrite(16,1);
+				}
+
+				function offCharger(){
+					webiopi().digitalWrite(16,0);					
+				}
+
+			</script>
+
+
+			<h1 class="top-header">Welcome to your Smart home Menu</h1>
+
+			<div id="fanButtons">
+				<input id="round" type="submit" value="Fan On"  onclick="onFan()"/>
+				<input id="round" type="submit" value="Fan Off" onclick="offFan()"/>
+			</div>	
+
+			<div id="lightButtons">
+				<input id="round" type="submit" value="Lights On" onclick="onLights()"/>
+				<input id="round" type="submit" value="Lights Off" onclick="offLights()"/>
+			</div>
+
+			<div id="chargingButtons">
+				<input id="round" type="submit" value="Charging On" onclick="onCharger()"/>
+				<input id="round" type="submit" value="Charging Off" onclick="offCharger()"/>
+			</div>
+						
+	</body>
+
+</html>
