@@ -1,4 +1,5 @@
 Two versions of the project where made.
+Purpose : The technology is used to control your home electrical appliances remotely using your mobile phone over internet. Smart Home 2.0 uses Android Application whereas Smart home 1.0 uses Web Interface.
 #1) SMART HOME 1.0 MADE USING RASPBERRY PI
 
 ![smart home 1](https://cloud.githubusercontent.com/assets/14818804/21540494/6f1b86fe-cdd5-11e6-8522-c4b73c891bab.jpg)
